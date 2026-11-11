@@ -17,16 +17,16 @@ SSH 登录路由器后（OpenWrt / immortalwrt），任选一种：
 ### 方式 1：一键拉取并运行（最省事）
 
 ```sh
-wget -O - https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main/get-hp.sh | sh
+wget -O - https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/get-hp.sh | sh
 ```
 
 > 若 `wget` 不支持 `-O -`，改用：
-> `curl -fsSL https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main/get-hp.sh | sh`
+> `curl -fsSL https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/get-hp.sh | sh`
 
 ### 方式 2：手动下载主脚本再运行
 
 ```sh
-wget -O /tmp/homeproxy-build.sh https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main/homeproxy-build.sh
+wget -O /tmp/homeproxy-build.sh https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/homeproxy-build.sh
 sh /tmp/homeproxy-build.sh
 ```
 

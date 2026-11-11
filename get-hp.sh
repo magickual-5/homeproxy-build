@@ -3,11 +3,11 @@
 #
 # 用法（路由器上，任选其一）：
 #   1) 直接管道执行本文件（会先把主脚本下载到 /tmp 再运行）：
-#        wget -O - https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main/get-hp.sh | sh
+#        wget -O - https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/get-hp.sh | sh
 #      （若 wget 不支持 -O -，可改用： curl -fsSL <上面URL> | sh）
 #
 #   2) 或两步：先下载主脚本，再运行：
-#        wget -O /tmp/homeproxy-build.sh https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main/homeproxy-build.sh
+#        wget -O /tmp/homeproxy-build.sh https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/homeproxy-build.sh
 #        sh /tmp/homeproxy-build.sh
 #
 # 说明：主脚本 homeproxy-build.sh 内部会自动用 bash 重跑自身、并用 opkg
@@ -20,7 +20,7 @@ REPO_RAW="https://raw.githubusercontent.com/magickual-5/homeproxy-build/main"
 MAIN="homeproxy-build.sh"
 DEST="/tmp/${MAIN}"
 
-if [ -z "$REPO_RAW" ] || echo "$REPO_RAW" | grep -q "<你的用户名>"; then
+if [ -z "$REPO_RAW" ] || echo "$REPO_RAW" | grep -q "magickual-5"; then
   echo "请先编辑 get-hp.sh，把 REPO_RAW 改成你自己的 GitHub Raw 地址。" >&2
   exit 1
 fi
