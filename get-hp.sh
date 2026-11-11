@@ -16,12 +16,12 @@
 set -e
 
 # ↓↓↓ 部署到 GitHub 后，把下面这行改成你自己的 Raw 地址 ↓↓↓
-REPO_RAW="https://raw.githubusercontent.com/magickual-5/homeproxy-build/refs/heads/main/get-hp.sh"
+REPO_RAW="https://raw.githubusercontent.com/magickual-5/homeproxy-build/refs/heads/main"
 MAIN="homeproxy-build.sh"
 DEST="/tmp/${MAIN}"
 
-if [ -z "$REPO_RAW" ] || echo "$REPO_RAW" | grep -q "magickual-5"; then
-  echo "请先编辑 get-hp.sh，把 REPO_RAW 改成你自己的 GitHub Raw 地址。" >&2
+if [ -z "$REPO_RAW" ]; then
+  echo "请先编辑 get-hp.sh，设置 REPO_RAW。" >&2
   exit 1
 fi
 
