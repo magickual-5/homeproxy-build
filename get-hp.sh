@@ -3,7 +3,7 @@
 #
 # 用法（路由器上，任选其一）：
 #   1) 直接管道执行本文件（会先把主脚本下载到 /tmp 再运行）：
-#        wget -O - https://raw.githubusercontent.com/magickual-5/homeproxy-build/main/get-hp.sh | sh
+#        wget -O - https://raw.githubusercontent.com/magickual-5/homeproxy-build/refs/heads/main/get-hp.sh | sh
 #      （若 wget 不支持 -O -，可改用： curl -fsSL <上面URL> | sh）
 #
 #   2) 或两步：先下载主脚本，再运行：
