@@ -10,41 +10,7 @@
 
 ---
 
-## 一、部署到 GitHub
-
-把本仓库推送到你自己的 GitHub 账号即可。
-
-### 方式 A：用 GitHub CLI（推荐）
-
-```bash
-cd homeproxy-build
-git init
-git add -A
-git commit -m "Initial commit: HomeProxy build script"
-
-gh auth login            # 首次需登录；或用下方“方式 B”的 Token
-gh repo create homeproxy-build --public --source=. --remote=origin --push
-```
-
-### 方式 B：用 Git + Personal Access Token
-
-```bash
-cd homeproxy-build
-git init
-git add -A
-git commit -m "Initial commit: HomeProxy build script"
-git branch -M main
-git remote add origin https://github.com/<你的用户名>/homeproxy-build.git
-git push -u origin main
-```
-
-> 推送后，把 `get-hp.sh` 顶部的 `REPO_RAW` 占位符
-> `https://raw.githubusercontent.com/<你的用户名>/homeproxy-build/main`
-> 改成你的真实地址，再提交一次。
-
----
-
-## 二、路由器上 SSH 拉取并运行
+## 一、路由器上 SSH 拉取并运行
 
 SSH 登录路由器后（OpenWrt / immortalwrt），任选一种：
 
@@ -84,7 +50,7 @@ cd /root/homeproxy-build && git pull
 
 ---
 
-## 三、菜单与使用
+## 二、菜单与使用
 
 运行后进入交互菜单：
 
@@ -102,7 +68,7 @@ cd /root/homeproxy-build && git pull
 
 ---
 
-## 四、文件说明
+## 三、文件说明
 
 | 文件 | 说明 |
 | --- | --- |
@@ -113,7 +79,7 @@ cd /root/homeproxy-build && git pull
 
 ---
 
-## 五、注意事项（真机验证）
+## 四、注意事项（真机验证）
 
 - 本脚本在沙箱中通过了 `bash -n` 语法检查与 JSON 生成逻辑验证，
   但 **未在真实路由器上跑过**。请在真机上执行后确认：
