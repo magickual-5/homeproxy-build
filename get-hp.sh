@@ -16,7 +16,7 @@
 set -e
 
 # ↓↓↓ 部署到 GitHub 后，把下面这行改成你自己的 Raw 地址 ↓↓↓
-REPO_RAW="https://raw.githubusercontent.com/magickual-5/homeproxy-build/refs/heads/main"
+REPO_RAW="https://raw.githubusercontent.com/magickual-5/homeproxy-build/refs/heads/main/"
 MAIN="homeproxy-build.sh"
 DEST="/tmp/${MAIN}"
 
